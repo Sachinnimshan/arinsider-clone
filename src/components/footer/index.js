@@ -4,13 +4,32 @@ import { footerLinks } from "../../routes/navigation";
 import { AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
+import SiteLogo from "../common/logo";
 
 function Footer() {
+  const socialIcons = [
+    {
+      title: "Linkedin",
+      icon: <AiFillLinkedin />,
+    },
+    {
+      title: "Twitter",
+      icon: <AiOutlineTwitter />,
+    },
+    {
+      title: "Facebook",
+      icon: <BsFacebook />,
+    },
+    {
+      title: "Youtube",
+      icon: <FaYoutube />,
+    },
+  ];
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerTopContainer}>
         <div className={styles.siteLogoContainer}>
-          <img src="/images/siteLogo.webp" className={styles.siteLogoFooter} />
+          <SiteLogo className={styles.siteLogoFooter} />
           <span className={styles.copyRightText}>© 2017-2023 AR Insider</span>
         </div>
 
@@ -26,10 +45,11 @@ function Footer() {
         ))}
       </div>
       <div className={styles.socialMediaContainer}>
-        <AiFillLinkedin className={styles.socialIcon} />
-        <AiOutlineTwitter className={styles.socialIcon} />
-        <BsFacebook className={styles.socialIcon} />
-        <FaYoutube className={styles.socialIcon} />
+        {socialIcons?.map((icon) => (
+          <span className={styles.socialIcon} key={icon.title}>
+            {icon.icon}
+          </span>
+        ))}
       </div>
     </div>
   );

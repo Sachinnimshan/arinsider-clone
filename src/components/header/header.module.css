@@ -2,20 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/images/header.jpg");
   background-size: cover;
-  background-position: center right;
+  background-position: center top;
 }
 
 .siteLogo {
-  max-width: 25%;
+  max-width: 35%;
 }
 
 .headerRightSide {
   display: flex;
-  align-items: center;
 }
 
 .menuIcon {
@@ -37,7 +36,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 250px;
+  width: 225px;
   height: 100vh;
   z-index: 300;
   background-color: #282828;
@@ -59,6 +58,6 @@
     display: none;
   }
   .siteLogo {
-    max-width: 275px;
+    max-width: 250px;
   }
 }

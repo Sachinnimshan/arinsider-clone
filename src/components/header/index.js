@@ -1,25 +1,37 @@
 import { navigationRoutes } from "@/routes/navigation";
-import React, { useState } from "react";
-import DropDown from "../dropdown";
+import React, { useEffect, useState, useRef } from "react";
+import DropDown from "../common/dropdown";
 import styles from "./header.module.css";
 import { IoMenuSharp } from "react-icons/io5";
+import SiteLogo from "../common/logo";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
   const handleShow = () => setSidebar(!sidebar);
   const handleClose = () => setSidebar(false);
+  const sidebarRef = useRef(null);
+
+  const handleOutSideClick = (e) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+      handleClose();
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutSideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutSideClick);
+    };
+  }, [sidebarRef]);
 
   return (
     <div className={styles.headerContainer}>
-      <img
-        className={styles.siteLogo}
-        src="/images/siteLogo.webp"
-        alt="Ar Insider"
-      />
+      <SiteLogo className={styles.siteLogo} />
+
       <div className={styles.headerRightSide}>
         <IoMenuSharp className={styles.menuIcon} onClick={handleShow} />
         <div
           className={sidebar ? styles.sidebarContainer : styles.menuContainer}
+          ref={sidebarRef}
         >
           {navigationRoutes.map((item) => (
             <DropDown

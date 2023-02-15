@@ -1,5 +1,5 @@
 import { navigationRoutes } from "@/routes/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DropDown from "../dropdown";
 import styles from "./header.module.css";
 import { IoMenuSharp } from "react-icons/io5";

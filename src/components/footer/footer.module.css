@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 4rem 2rem;
   display: flex;
+  gap: 5rem;
 } 
 
 .footerTopContainer {
@@ -25,7 +26,7 @@
 
 .copyRightText{
     font-size: 14px;
-    color: gray;
+    color: var(--font-gray-color);
 }
 
 .footerLinkItem {
@@ -34,14 +35,14 @@
 }
 
 .footerLinkTitle {
-  color: lightgrey;
+  color: var(--secondary-font-color);
   font-size: 17px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .footerLink {
-  color: gray;
+  color: var(--font-gray-color);
   font-size: 14px;
   padding: 5px 0;
   font-weight: 500;
@@ -53,6 +54,14 @@
 }
 
 .socialMediaContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialIcon {
+  font-size: 2.75rem;
+  color: var(--secondary-font-color);
 }
 
 @media screen and (max-width: 800px) {

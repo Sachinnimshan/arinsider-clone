@@ -1,0 +1,77 @@
+.navItemContainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+
+.navItemBordered {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 0.5px solid #303030;
+}
+
+.navItem:hover .navItemText {
+  color: var(--primary-font-color);
+}
+
+.navItemText {
+  font-size: var(--primary-font-size);
+  color: var(--secondary-font-color);
+  font-weight: var(--primary-font-weight);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dropDownContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--primary-font-color);
+  margin-top: 3rem;
+  max-width: 190px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+  transition: all ease-in-out 0.3s;
+}
+
+.dropDownItem {
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  border-bottom: 1px solid #f0f0f0;
+  text-transform: uppercase;
+  color: var(--font-gray-color);
+}
+
+.dropDownItemBordered {
+  padding: 20px 15px 15px 2.5rem;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 1px solid #282828;
+  color: var(--secondary-font-color);
+}
+
+.dropDownItem:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.dropDownIcon {
+  color: var(--secondary-font-color);
+  font-size: 20px;
+}
+
+.expandedMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #303030;
+}

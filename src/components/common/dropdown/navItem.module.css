@@ -25,7 +25,7 @@
 .navItemText {
   font-size: var(--primary-font-size);
   color: var(--secondary-font-color);
-  font-weight: var(--primary-font-weight);
+  font-weight: var(--primary-font-weight-light);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -45,7 +45,7 @@
 .dropDownItem {
   padding: 15px;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: var(--primary-font-weight-light);
   border-bottom: 1px solid #f0f0f0;
   text-transform: uppercase;
   color: var(--font-gray-color);
@@ -54,7 +54,7 @@
 .dropDownItemBordered {
   padding: 20px 15px 15px 2.5rem;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: var(--primary-font-weight-light);
   text-transform: uppercase;
   border-bottom: 1px solid #282828;
   color: var(--secondary-font-color);

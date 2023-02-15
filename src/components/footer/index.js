@@ -31,6 +31,13 @@ function Footer() {
         <div className={styles.siteLogoContainer}>
           <SiteLogo className={styles.siteLogoFooter} />
           <span className={styles.copyRightText}>© 2017-2023 AR Insider</span>
+          <div className={styles.socialMediaContainer}>
+            {socialIcons?.map((icon) => (
+              <span className={styles.socialIcon} key={icon.title}>
+                {icon.icon}
+              </span>
+            ))}
+          </div>
         </div>
 
         {footerLinks.map((item) => (
@@ -42,13 +49,6 @@ function Footer() {
               </span>
             ))}
           </div>
-        ))}
-      </div>
-      <div className={styles.socialMediaContainer}>
-        {socialIcons?.map((icon) => (
-          <span className={styles.socialIcon} key={icon.title}>
-            {icon.icon}
-          </span>
         ))}
       </div>
     </div>

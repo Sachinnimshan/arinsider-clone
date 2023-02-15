@@ -1,0 +1,40 @@
+.slideShowContainer {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.slideShowImg {
+  max-height: 60vh;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imageContent {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  width: 50%;
+}
+
+.imageTitle {
+  font-size: 24px;
+  color: var(--primary-font-color);
+  font-weight: bolder;
+}

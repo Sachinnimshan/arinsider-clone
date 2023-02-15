@@ -60,7 +60,7 @@
 }
 
 .socialIcon {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   color: var(--secondary-font-color);
 }
 
@@ -69,4 +69,6 @@
         flex-direction: column;
         gap: 2rem;
     }
+
+   
 }

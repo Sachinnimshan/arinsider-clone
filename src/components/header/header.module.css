@@ -18,7 +18,7 @@
 }
 
 .menuIcon {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--secondary-font-color);
   display: none;
   cursor: var(--primary-pointer-cursor);

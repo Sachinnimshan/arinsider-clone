@@ -1,0 +1,30 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 2rem;
+}
+
+.siteLogo {
+    max-width: 400px;
+    width: 100%;
+}
+
+.navigationContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+    .headerContainer{
+        padding: 0.75rem;
+    }
+    .navigationContainer{
+        display: none;
+    }
+    .siteLogo{
+        max-width: 300px;
+    }
+}

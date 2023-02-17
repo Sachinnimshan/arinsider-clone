@@ -1,5 +1,4 @@
 .articleCard {
-  height: 100%;
   position: relative;
   cursor: pointer;
 }
@@ -11,13 +10,26 @@
 }
 
 .articleCardTitle {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
   color: var(--primary-font-color);
   font-weight: 700;
   font-size: 25px;
   text-align: left;
-  height: 100px;
+}
+
+.articleCardInfo {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 255, 0, 0.5);
+  padding: 1rem;
+  width: inherit;
+  margin-bottom: 2px;
+  position: absolute;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .articleCardImage {
+    max-width: 100%;
+  }
 }

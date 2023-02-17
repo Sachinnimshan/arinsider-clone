@@ -9,10 +9,51 @@
   --primary-font-size: 15px;
   --primary-font-weight-light: 400;
   --primary-pointer-cursor: pointer;
+  --section-header-color: #212121;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sectionCardContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.sectionTitle {
+  font-size: 90px;
+  font-weight: 700;
+  color: var(--section-header-color);
+}
+
+.sectionIcon {
+  width: 65px;
+}
+
+@media screen and (max-width: 800px) {
+  .sectionTitle {
+    font-size: 40px;
+  }
+  .sectionCardContainer {
+    flex-direction: column;
+  }
+  .sectionIcon{
+    max-width: 30px;
+  }
+}

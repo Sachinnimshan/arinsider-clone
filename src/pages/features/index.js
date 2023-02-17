@@ -1,4 +1,4 @@
-import FeatureInfo from "@/components/features";
+import FeatureInfo from "@/components/sections/Features";
 import Layout from "@/components/layout";
 import SlideShow from "@/components/slideshow";
 import React from "react";

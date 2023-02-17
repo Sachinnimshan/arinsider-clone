@@ -4,7 +4,8 @@ import { footerLinks } from "../../routes/navigation";
 import { AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
-import SiteLogo from "../common/logo";
+import { SiteIconLight } from "../common/icons";
+import Logo from "../common/logo";
 
 function Footer() {
   const socialIcons = [
@@ -29,7 +30,7 @@ function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.footerTopContainer}>
         <div className={styles.siteLogoContainer}>
-          <SiteLogo className={styles.siteLogoFooter} />
+          <Logo className={styles.siteLogoFooter}  src={SiteIconLight}/>
           <span className={styles.copyRightText}>© 2017-2023 AR Insider</span>
           <div className={styles.socialMediaContainer}>
             {socialIcons?.map((icon) => (

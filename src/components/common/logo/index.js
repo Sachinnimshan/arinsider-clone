@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
-function SiteLogo({className}) {
-  return <img src="/images/siteLogo.webp" alt="Ar Insider" className={className} />;
+function Logo({src, className}) {
+  return (
+    <img src={src} className={className}/>
+  )
 }
 
-export default SiteLogo;
+export default Logo;

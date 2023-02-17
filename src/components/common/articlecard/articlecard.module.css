@@ -1,0 +1,23 @@
+.articleCard {
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.articleCardImage {
+  height: 400px;
+  object-fit: cover;
+  max-width: 250px;
+}
+
+.articleCardTitle {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  color: var(--primary-font-color);
+  font-weight: 700;
+  font-size: 25px;
+  text-align: left;
+  height: 100px;
+}

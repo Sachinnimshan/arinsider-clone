@@ -3,7 +3,8 @@ import React, { useEffect, useState, useRef } from "react";
 import DropDown from "../common/dropdown";
 import styles from "./header.module.css";
 import { IoMenuSharp } from "react-icons/io5";
-import SiteLogo from "../common/logo";
+import { SiteIconLight } from "../common/icons";
+import Logo from "../common/logo";
 
 function Header() {
   const [sidebar, setSidebar] = useState(false);
@@ -25,7 +26,7 @@ function Header() {
 
   return (
     <div className={styles.headerContainer}>
-      <SiteLogo className={styles.siteLogo} />
+      <Logo src={SiteIconLight} className={styles.siteLogo} />
 
       <div className={styles.headerRightSide}>
         <IoMenuSharp className={styles.menuIcon} onClick={handleShow} />

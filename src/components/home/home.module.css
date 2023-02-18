@@ -1,0 +1,11 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+}

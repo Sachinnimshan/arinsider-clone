@@ -11,7 +11,7 @@ function ArticleCard({ title, src, width, height }) {
       style={{
         backgroundImage: `url(${src})`,
         height: height,
-        width: isMobile ? "100%": width
+        width: isMobile ? "100%" : width
       }}
     >
       <div className={styles.articleCardInfo}>

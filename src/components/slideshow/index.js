@@ -1,26 +1,40 @@
 import React, { useState, useEffect } from "react";
 import SlideImage from "./SlideImage";
 import styles from "./slideshow.module.css";
+import useResponsive from "@/hooks/useResponsive";
 
-function SlideShow({ images }) {
+function SlideShow({ images, height, width }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [imageArray, setImageArray] = useState([]);
+  const isMobile = useResponsive();
   const autoScroll = true;
   let slideTimer;
   let scrollTime = 3000;
 
   const slideData = [
     {
-      title: "Title 1",
-      path: "./images/slideimg2.webp",
+      title: "Will the Metaverse Get Thrown in Buzzword Jail?",
+      path: "./images/slideimg1.webp",
+      date: Date.now()
     },
     {
-      title: "Title 2",
+      title: "Spatial beats: meta, Squid Game and XR Funding",
       path: "./images/slideimg3.webp",
+      date: Date.now()
     },
     {
-      title: "Title 3",
+      title: "Will the Metaverse Get Thrown in Buzzword Jail?",
+      path: "./images/slideimg4.webp",
+      date: Date.now()
+    },
+    {
+      title: "Spatial beats: meta, Squid Game and XR Funding",
+      path: "./images/slideimg5.webp",
+      date: Date.now()
+    },
+    {
+      title: "Google lense reach 10 billion searches",
       path: "/images/slideimg6.webp",
+      date: Date.now()
     },
   ];
 
@@ -40,7 +54,6 @@ function SlideShow({ images }) {
     slideTimer = setInterval(handleNext, scrollTime);
   };
 
-
   useEffect(() => {
     setCurrentSlide(0);
   }, []);
@@ -54,8 +67,6 @@ function SlideShow({ images }) {
     };
   }, [currentSlide]);
 
-
-
   return (
     <div className={styles.slideShowContainer}>
       {slideData?.map((img, index) => {
@@ -66,7 +77,12 @@ function SlideShow({ images }) {
             onDrag={handleNext}
           >
             {index === currentSlide && (
-              <SlideImage src={img.path} title={img.title} />
+              <SlideImage
+                src={img.path}
+                title={img.title}
+                height={400}
+                width={isMobile ? "100%" : 750}
+              />
             )}
           </div>
         );

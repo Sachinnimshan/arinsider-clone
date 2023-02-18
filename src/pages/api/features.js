@@ -3,15 +3,15 @@
 const featureData = [
   {
     title: "Snap Launches Ray Tracing in Lens Studio",
-    image: "/images/trending1.webp",
+    image: "/images/feature1.webp",
   },
   {
     title: "A Field Guide to AI in the Metaverse",
-    image: "/images/trending2.webp",
+    image: "/images/feature2.webp",
   },
   {
     title: "How Many VR Headsets Did Meta Sell in Q4",
-    image: "/images/trending3.webp",
+    image: "/images/feature3.webp",
   },
 ];
 

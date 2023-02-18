@@ -21,12 +21,12 @@ body {
 .sectionContainer {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
 .sectionCardContainer {
   display: flex;
   gap: 1rem;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 

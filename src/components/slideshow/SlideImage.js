@@ -1,13 +1,20 @@
+import useResponsive from "@/hooks/useResponsive";
 import React from "react";
 import styles from "./slideshow.module.css";
 
-function SlideImage({ src, title, date }) {
+function SlideImage({ src, title, date, width, height }) {
   return (
-    <div className={styles.slideImageContainer}>
-      <img src={src} className={styles.slideImage} />
+    <div
+      className={styles.slideImageContainer}
+      style={{
+        backgroundImage: `url(${src})`,
+        height: height,
+        width: width,
+      }}
+    >
       <div className={styles.slideImageInfo}>
         <span className={styles.imageTitle}>{title}</span>
-        <span>{date}</span>
+        <span className={styles.imageDate}>{date}</span>
       </div>
     </div>
   );

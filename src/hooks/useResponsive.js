@@ -2,22 +2,25 @@ import { useEffect, useState } from "react";
 
 const useResponsive = () => {
   const [state, setState] = useState({
-    windowWidth: window.innerWidth,
-    isMobile: false,
+    width: undefined,
+    mobile: false,
   });
 
-  const resizeHandler = () => {
-    const currentWindowWidth = window.innerWidth;
-    const isMobile = currentWindowWidth < 800;
-    setState({ windowWidth: currentWindowWidth, isMobile });
-  };
-
   useEffect(() => {
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [state.windowWidth]);
+    const handleResize = () => {
+      let currentWidth;
+      currentWidth = window.innerWidth;
+      const isMobile = currentWidth < 800;
+      setState({
+        width: window.innerWidth,
+        mobile: isMobile,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  return state.isMobile;
+  return state.mobile;
 };
 
 export default useResponsive;

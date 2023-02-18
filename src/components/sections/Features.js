@@ -25,8 +25,8 @@ function FeatureInfo() {
             <ArticleCard
               src={item.image}
               title={item.title}
-              width={250}
-              height={400}
+              width={225}
+              height={350}
             />
           ))}
       </div>

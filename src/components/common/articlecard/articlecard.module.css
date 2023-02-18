@@ -1,35 +1,18 @@
-.articleCard {
-  position: relative;
-  cursor: pointer;
-}
-
-.articleCardImage {
-  height: 400px;
-  object-fit: cover;
-  max-width: 250px;
-}
-
 .articleCardTitle {
   color: var(--primary-font-color);
   font-weight: 700;
   font-size: 25px;
-  text-align: left;
 }
 
 .articleCardInfo {
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: rgba(0, 255, 0, 0.5);
+  display: flex;
+  width: 100%;
   padding: 1rem;
-  width: inherit;
-  margin-bottom: 2px;
-  position: absolute;
-  overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
-  .articleCardImage {
-    max-width: 100%;
-  }
+@media screen and (max-width: 768px) {
+  
+  
 }
+

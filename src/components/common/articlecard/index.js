@@ -7,18 +7,15 @@ function ArticleCard({ title, src, width, height }) {
 
   return (
     <div
+      className={styles.articleCard}
       style={{
         backgroundImage: `url(${src})`,
         height: height,
-        width: isMobile ? "100%": width,
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-        display: "flex",
-        alignItems: "flex-end",
+        width: isMobile ? "100%": width
       }}
     >
       <div className={styles.articleCardInfo}>
-        <p className={styles.articleCardTitle}>{title}</p>
+        <span className={styles.articleCardTitle}>{title}</span>
       </div>
     </div>
   );

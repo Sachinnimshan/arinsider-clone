@@ -1,18 +1,19 @@
+.articleCard {
+  background-position: center center;
+  display: flex;
+  background-size: cover;
+  align-items: flex-end;
+}
+
 .articleCardTitle {
   color: var(--primary-font-color);
   font-weight: 700;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .articleCardInfo {
-  background-color: rgba(0, 255, 0, 0.5);
+  background-color: rgba(0, 255, 0, 0.7);
   display: flex;
   width: 100%;
   padding: 1rem;
 }
-
-@media screen and (max-width: 768px) {
-  
-  
-}
-

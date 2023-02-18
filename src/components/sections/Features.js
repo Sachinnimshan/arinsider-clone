@@ -23,6 +23,7 @@ function FeatureInfo() {
         {featureData &&
           featureData.data?.map((item) => (
             <ArticleCard
+              key={item.title}
               src={item.image}
               title={item.title}
               width={225}

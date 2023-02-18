@@ -23,6 +23,7 @@ function TrendingInfo() {
         {trendingData &&
           trendingData.data?.map((item) => (
             <ArticleCard
+              key={item.title}
               src={item.image}
               title={item.title}
               width={365}
@@ -31,7 +32,7 @@ function TrendingInfo() {
           ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default TrendingInfo;

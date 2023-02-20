@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import SlideImage from "./SlideImage";
-import styles from "./slideshow.module.css";
 import useResponsive from "@/hooks/useResponsive";
+import ArticleCard from "../common/articlecard";
 
-function SlideShow({ images, height, width }) {
+function SlideShow({
+  height = 400,
+  maxWidth = "100%",
+  overLayHeight = "100%",
+  overLayWidth = "50%",
+  titleAlignemnt = "center",
+}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useResponsive();
   const autoScroll = true;
@@ -68,16 +73,19 @@ function SlideShow({ images, height, width }) {
   }, [currentSlide]);
 
   return (
-    <div className={styles.slideShowContainer}>
+    <div>
       {slideData?.map((img, index) => {
         return (
           <div key={index}>
             {index === currentSlide && (
-              <SlideImage
+              <ArticleCard
                 src={img.path}
                 title={img.title}
-                height={400}
-                width={isMobile ? "100%" : 750}
+                height={height}
+                maxWidth={maxWidth}
+                overLayHeight={overLayHeight}
+                overLayWidth={overLayWidth}
+                titleAlignemnt={titleAlignemnt}
               />
             )}
           </div>

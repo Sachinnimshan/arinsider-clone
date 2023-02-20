@@ -3,10 +3,10 @@ import React from "react";
 import ArticleCard from "../common/articlecard";
 import { SiteIconDark } from "../common/icons";
 import Logo from "../common/logo";
+import SlideShow from "../slideshow";
 import YoutubeCard from "../iframe";
 
 function Sidebar() {
-  const isMobile = useResponsive();
   const sections = [
     {
       title: "Weekly Newsletter",
@@ -14,16 +14,10 @@ function Sidebar() {
       displayText: "Subscribe & Get a Free White Paper",
     },
     {
-      title: "Latest Articles",
-      image: [],
-      displayText: "",
-    },
-    {
       title: "Business & Intelligence",
-      image: [],
-      displayText: "",
+      image: "/images/businessint.png",
+      displayText: "Get Spatial Smart",
     },
-
     {
       title: "Visibility & Sponsorship",
       image: "/images/sponsorship.webp",
@@ -34,6 +28,12 @@ function Sidebar() {
     <div className="sidebarContainer">
       <Logo src={SiteIconDark} className="siteIconDark" />
       <YoutubeCard embedId="DCywA443f0A" />
+      <SlideShow
+        maxWidth="22vw"
+        height={300}
+        overLayWidth="100%"
+        titleAlignemnt="start"
+      />
       {sections?.map((item) => (
         <ArticleCard
           key={item.title}
@@ -44,6 +44,7 @@ function Sidebar() {
           height={300}
           overLayHeight="100%"
           title={item.displayText}
+          flexGrow={false}
         />
       ))}
     </div>

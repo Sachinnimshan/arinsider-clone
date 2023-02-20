@@ -5,14 +5,18 @@ import Logo from "../logo";
 import { SectionIconDark } from "../icons";
 
 function ArticleCard({
+  header,
   title,
   src,
   width,
   height,
-  header,
   alignTitle = "flex-end",
-  bgColor = "rgba(0, 255, 0, 0.8)",
+  bgColor = "rgba(0, 0, 0, 0.6)",
   overLayHeight,
+  overLayWidth,
+  flexGrow = true,
+  maxWidth,
+  titleAlignemnt,
 }) {
   const isMobile = useResponsive();
 
@@ -21,6 +25,7 @@ function ArticleCard({
       className={styles.articleCardContainer}
       style={{
         width: isMobile ? "100%" : width,
+        flexGrow: flexGrow && 1,
       }}
     >
       {header && (
@@ -35,14 +40,22 @@ function ArticleCard({
           backgroundImage: `url(${src})`,
           height: height,
           alignItems: alignTitle,
+          maxWidth: maxWidth,
         }}
       >
-        <div
-          className={styles.articleCardInfo}
-          style={{ backgroundColor: bgColor, height: overLayHeight }}
-        >
-          <span className={styles.articleCardTitle}>{title}</span>
-        </div>
+        {title && (
+          <div
+            className={styles.articleCardInfo}
+            style={{
+              backgroundColor: bgColor,
+              height: overLayHeight,
+              width: isMobile ? "100%" : overLayWidth,
+              alignItems: titleAlignemnt,
+            }}
+          >
+            <span className={styles.articleCardTitle}>{title}</span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ function Sidebar() {
         <ArticleCard
           key={item.title}
           header={item.title}
-          width={isMobile ? "100%" : 350}
+          width="22vw"
           bgColor="rgba(0,0,0,0.8)"
           height={300}
         />

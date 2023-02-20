@@ -10,7 +10,7 @@ const useResponsive = () => {
     const handleResize = () => {
       let currentWidth;
       currentWidth = window.innerWidth;
-      const isMobile = currentWidth < 800;
+      const isMobile = currentWidth < 900;
       setState({
         width: window.innerWidth,
         mobile: isMobile,

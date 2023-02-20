@@ -16,7 +16,12 @@ function ArticleCard({
   const isMobile = useResponsive();
 
   return (
-    <div className={styles.articleCardContainer}>
+    <div
+      className={styles.articleCardContainer}
+      style={{
+        width: isMobile ? "100%" : width,
+      }}
+    >
       {header && (
         <div className={styles.articleCardHeader}>
           <Logo src={SectionIconDark} className="sectionIconDark" />
@@ -28,7 +33,6 @@ function ArticleCard({
         style={{
           backgroundImage: `url(${src})`,
           height: height,
-          width: isMobile ? "100%" : width,
           alignItems: alignTitle,
         }}
       >

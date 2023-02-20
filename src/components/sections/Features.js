@@ -26,7 +26,7 @@ function FeatureInfo() {
               key={item.title}
               src={item.image}
               title={item.title}
-              width={225}
+              width="15vw"
               height={350}
             />
           ))}

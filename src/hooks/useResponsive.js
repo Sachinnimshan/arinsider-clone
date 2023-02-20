@@ -8,9 +8,8 @@ const useResponsive = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      let currentWidth;
-      currentWidth = window.innerWidth;
-      const isMobile = currentWidth < 900;
+      const currentWidth = window.innerWidth;
+      const isMobile = currentWidth < 800;
       setState({
         width: window.innerWidth,
         mobile: isMobile,

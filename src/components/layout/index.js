@@ -25,8 +25,8 @@ function Layout({ children }) {
       </header>
       <main className={styles.layoutContent}>
         {children}
-        <Sidebar/>
-      </main>
+        <Sidebar />
+      </main>  
       <footer>
         <Footer />
       </footer>

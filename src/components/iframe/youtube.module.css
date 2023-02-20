@@ -1,4 +1,5 @@
-.youtubecard{
-    padding: 0.5rem 0;
+.youtubecard {
+  border: none;
+  width: 100%;
+  height: 100%;
 }
-

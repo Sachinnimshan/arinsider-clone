@@ -12,6 +12,7 @@ function ArticleCard({
   header,
   alignTitle = "flex-end",
   bgColor = "rgba(0, 255, 0, 0.8)",
+  overLayHeight,
 }) {
   const isMobile = useResponsive();
 
@@ -38,7 +39,7 @@ function ArticleCard({
       >
         <div
           className={styles.articleCardInfo}
-          style={{ backgroundColor: bgColor }}
+          style={{ backgroundColor: bgColor, height: overLayHeight }}
         >
           <span className={styles.articleCardTitle}>{title}</span>
         </div>

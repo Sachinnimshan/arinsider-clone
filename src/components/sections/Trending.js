@@ -26,7 +26,7 @@ function TrendingInfo() {
               key={item.title}
               src={item.image}
               title={item.title}
-              width="24vw"
+              width="22vw"
               height={360}
             />
           ))}

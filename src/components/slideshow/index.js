@@ -71,10 +71,9 @@ function SlideShow({ images, height, width }) {
     <div className={styles.slideShowContainer}>
       {slideData?.map((img, index) => {
         return (
-          <div>
+          <div key={index}>
             {index === currentSlide && (
               <SlideImage
-              key={index}
                 src={img.path}
                 title={img.title}
                 height={400}

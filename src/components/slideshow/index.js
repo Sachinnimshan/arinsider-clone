@@ -14,27 +14,27 @@ function SlideShow({ images, height, width }) {
     {
       title: "Will the Metaverse Get Thrown in Buzzword Jail?",
       path: "./images/slideimg1.webp",
-      date: Date.now()
+      date: Date.now(),
     },
     {
       title: "Spatial beats: meta, Squid Game and XR Funding",
       path: "./images/slideimg3.webp",
-      date: Date.now()
+      date: Date.now(),
     },
     {
       title: "Will the Metaverse Get Thrown in Buzzword Jail?",
       path: "./images/slideimg4.webp",
-      date: Date.now()
+      date: Date.now(),
     },
     {
       title: "Spatial beats: meta, Squid Game and XR Funding",
       path: "./images/slideimg5.webp",
-      date: Date.now()
+      date: Date.now(),
     },
     {
       title: "Google lense reach 10 billion searches",
       path: "/images/slideimg6.webp",
-      date: Date.now()
+      date: Date.now(),
     },
   ];
 
@@ -71,11 +71,7 @@ function SlideShow({ images, height, width }) {
     <div className={styles.slideShowContainer}>
       {slideData?.map((img, index) => {
         return (
-          <div
-            className={index === currentSlide ? "slide active" : "slide"}
-            key={index}
-            onDrag={handleNext}
-          >
+          <div>
             {index === currentSlide && (
               <SlideImage
                 src={img.path}

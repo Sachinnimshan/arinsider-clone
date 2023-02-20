@@ -8,14 +8,11 @@ import styles from "./home.module.css";
 function HomePage() {
   return (
     <Layout>
-      <div className={styles.mainContainer}>
         <div className={styles.subContainer}>
           <SlideShow />
           <FeatureInfo />
           <TrendingInfo />
         </div>
-        <div className={styles.subContainer}></div>
-      </div>
     </Layout>
   );
 }

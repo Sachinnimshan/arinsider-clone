@@ -46,14 +46,44 @@ body {
   width: 65px;
 }
 
+.siteIconDark {
+  width: 22vw;
+}
+
+.sectionIconDark {
+  width: 50px;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebarSectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--section-header-color);
+}
+
 @media screen and (max-width: 800px) {
   .sectionTitle {
     font-size: 40px;
   }
+
+  .sidebarSectionTitle {
+    font-size: 18px;
+  }
   .sectionCardContainer {
     flex-direction: column;
   }
-  .sectionIcon{
+  .sectionIcon {
     max-width: 30px;
+  }
+  .sidebarContainer {
+    width: 100%;
+  }
+  .siteIconDark{
+    width: 60vw;
   }
 }

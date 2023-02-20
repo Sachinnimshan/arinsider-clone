@@ -1,8 +1,18 @@
+.articleCardContainer {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
 .articleCard {
   background-position: center center;
   display: flex;
   background-size: cover;
-  align-items: flex-end;
+}
+
+.articleCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .articleCardTitle {
@@ -12,7 +22,6 @@
 }
 
 .articleCardInfo {
-  background-color: rgba(0, 255, 0, 0.8);
   display: flex;
   width: 100%;
   padding: 1rem;

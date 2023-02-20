@@ -1,21 +1,43 @@
 import React from "react";
 import styles from "./articlecard.module.css";
 import useResponsive from "@/hooks/useResponsive";
+import Logo from "../logo";
+import { SectionIconDark } from "../icons";
 
-function ArticleCard({ title, src, width, height }) {
+function ArticleCard({
+  title,
+  src,
+  width,
+  height,
+  header,
+  alignTitle = "flex-end",
+  bgColor = "rgba(0, 255, 0, 0.8)",
+}) {
   const isMobile = useResponsive();
 
   return (
-    <div
-      className={styles.articleCard}
-      style={{
-        backgroundImage: `url(${src})`,
-        height: height,
-        width: isMobile ? "100%" : width
-      }}
-    >
-      <div className={styles.articleCardInfo}>
-        <span className={styles.articleCardTitle}>{title}</span>
+    <div className={styles.articleCardContainer}>
+      {header && (
+        <div className={styles.articleCardHeader}>
+          <Logo src={SectionIconDark} className="sectionIconDark" />
+          <span className="sidebarSectionTitle">{header}</span>
+        </div>
+      )}
+      <div
+        className={styles.articleCard}
+        style={{
+          backgroundImage: `url(${src})`,
+          height: height,
+          width: isMobile ? "100%" : width,
+          alignItems: alignTitle,
+        }}
+      >
+        <div
+          className={styles.articleCardInfo}
+          style={{ backgroundColor: bgColor }}
+        >
+          <span className={styles.articleCardTitle}>{title}</span>
+        </div>
       </div>
     </div>
   );

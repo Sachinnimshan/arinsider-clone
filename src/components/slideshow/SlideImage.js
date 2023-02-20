@@ -9,7 +9,7 @@ function SlideImage({ src, title, date, width, height }) {
       style={{
         backgroundImage: `url(${src})`,
         height: height,
-        width: width,
+        maxWidth: width,
       }}
     >
       <div className={styles.slideImageInfo}>

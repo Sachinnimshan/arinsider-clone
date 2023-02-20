@@ -74,6 +74,7 @@ function SlideShow({ images, height, width }) {
           <div>
             {index === currentSlide && (
               <SlideImage
+              key={index}
                 src={img.path}
                 title={img.title}
                 height={400}

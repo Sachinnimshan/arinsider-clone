@@ -30,6 +30,7 @@ function Sidebar() {
       <Logo src={SiteIconDark} className="siteIconDark" />
       {sections?.map((item) => (
         <ArticleCard
+          key={item.title}
           header={item.title}
           width={isMobile ? "100%" : 350}
           bgColor="rgba(0,0,0,0.8)"

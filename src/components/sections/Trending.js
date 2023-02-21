@@ -13,6 +13,7 @@ function TrendingInfo() {
         setTrendingData(data);
       });
   }, []);
+
   return (
     <div className="sectionContainer">
       <div className="sectionHeader">

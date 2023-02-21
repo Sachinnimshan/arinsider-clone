@@ -34,6 +34,7 @@ function Sidebar() {
         overLayWidth="100%"
         titleAlignemnt="start"
         titleFont="25px"
+        header="Latest Articles"
       />
       {sections?.map((item) => (
         <ArticleCard
@@ -41,7 +42,7 @@ function Sidebar() {
           header={item.title}
           src={item.image}
           width="22vw"
-          bgColor="rgba(0,0,0,0.6)"
+          overLayColor="rgba(0,0,0,0.6)"
           height={300}
           overLayHeight="100%"
           overLayWidth="100%"

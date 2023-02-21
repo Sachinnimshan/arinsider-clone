@@ -10,14 +10,14 @@ function ArticleCard({
   src,
   width,
   height,
-  alignTitle = "flex-end",
-  bgColor = "rgba(0, 0, 0, 0.6)",
+  overlayAlignment = "flex-end",
+  overLayColor = "rgba(0, 0, 0, 0.6)",
   overLayHeight,
   overLayWidth = "100%",
   flexGrow = true,
   maxWidth,
   titleAlignemnt,
-  titleFont = "25px",
+  titleFont = "25px"
 }) {
   const isMobile = useResponsive();
 
@@ -40,7 +40,7 @@ function ArticleCard({
         style={{
           backgroundImage: `url(${src})`,
           height: height,
-          alignItems: alignTitle,
+          alignItems: overlayAlignment,
           maxWidth: maxWidth,
         }}
       >
@@ -48,7 +48,7 @@ function ArticleCard({
           <div
             className={styles.articleCardInfo}
             style={{
-              backgroundColor: bgColor,
+              backgroundColor: overLayColor,
               height: overLayHeight,
               width: isMobile ? "100%" : overLayWidth,
               alignItems: titleAlignemnt,
@@ -57,7 +57,7 @@ function ArticleCard({
             <span
               className={styles.articleCardTitle}
               style={{
-                fontSize: titleFont,
+                fontSize: titleFont
               }}
             >
               {title}

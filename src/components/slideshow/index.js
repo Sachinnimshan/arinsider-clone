@@ -9,6 +9,7 @@ function SlideShow({
   overLayWidth = "50%",
   titleAlignemnt = "center",
   titleFont = "40px",
+  header,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useResponsive();
@@ -87,7 +88,8 @@ function SlideShow({
                 overLayHeight={overLayHeight}
                 overLayWidth={overLayWidth}
                 titleAlignemnt={titleAlignemnt}
-                titleFont={titleFont}
+                titleFont={ isMobile ? "25px" : titleFont}
+                header={header}
               />
             )}
           </div>

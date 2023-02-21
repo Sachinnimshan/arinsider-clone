@@ -8,6 +8,7 @@ function SlideShow({
   overLayHeight = "100%",
   overLayWidth = "50%",
   titleAlignemnt = "center",
+  titleFont = "40px",
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useResponsive();
@@ -82,10 +83,11 @@ function SlideShow({
                 src={img.path}
                 title={img.title}
                 height={height}
-                maxWidth={maxWidth}
+                maxWidth={isMobile ? "100%" : maxWidth}
                 overLayHeight={overLayHeight}
                 overLayWidth={overLayWidth}
                 titleAlignemnt={titleAlignemnt}
+                titleFont={titleFont}
               />
             )}
           </div>

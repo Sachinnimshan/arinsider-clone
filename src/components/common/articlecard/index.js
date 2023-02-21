@@ -13,10 +13,11 @@ function ArticleCard({
   alignTitle = "flex-end",
   bgColor = "rgba(0, 0, 0, 0.6)",
   overLayHeight,
-  overLayWidth,
+  overLayWidth = "100%",
   flexGrow = true,
   maxWidth,
   titleAlignemnt,
+  titleFont = "25px",
 }) {
   const isMobile = useResponsive();
 
@@ -53,7 +54,14 @@ function ArticleCard({
               alignItems: titleAlignemnt,
             }}
           >
-            <span className={styles.articleCardTitle}>{title}</span>
+            <span
+              className={styles.articleCardTitle}
+              style={{
+                fontSize: titleFont,
+              }}
+            >
+              {title}
+            </span>
           </div>
         )}
       </div>

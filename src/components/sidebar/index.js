@@ -33,6 +33,7 @@ function Sidebar() {
         height={300}
         overLayWidth="100%"
         titleAlignemnt="start"
+        titleFont="25px"
       />
       {sections?.map((item) => (
         <ArticleCard
@@ -43,6 +44,7 @@ function Sidebar() {
           bgColor="rgba(0,0,0,0.6)"
           height={300}
           overLayHeight="100%"
+          overLayWidth="100%"
           title={item.displayText}
           flexGrow={false}
         />

@@ -7,7 +7,7 @@ function YoutubeCard({ embedId }) {
       className={styles.youtubecard}
       src={`https://www.youtube.com/embed/${embedId}`}
       title="YouTube video player"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   );
 }

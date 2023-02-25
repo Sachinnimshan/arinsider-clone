@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useResponsive from "@/hooks/useResponsive";
 import ArticleCard from "../common/articlecard";
+import { useRouter } from "next/router";
 
 function SlideShow({
   height = 400,
@@ -9,33 +10,33 @@ function SlideShow({
   overLayWidth = "50%",
   titleAlignemnt = "center",
   titleFont = "40px",
-  header,
+  header
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useResponsive();
   const autoScroll = true;
   let slideTimer;
   let scrollTime = 3000;
-
+  const router = useRouter();
   const slideData = [
     {
       title: "Will the Metaverse Get Thrown in Buzzword Jail?",
-      path: "./images/slideimg1.webp",
+      path: "/images/slideimg1.webp",
       date: Date.now(),
     },
     {
       title: "Spatial beats: meta, Squid Game and XR Funding",
-      path: "./images/slideimg3.webp",
+      path: "/images/slideimg3.webp",
       date: Date.now(),
     },
     {
       title: "Will the Metaverse Get Thrown in Buzzword Jail?",
-      path: "./images/slideimg4.webp",
+      path: "/images/slideimg4.webp",
       date: Date.now(),
     },
     {
       title: "Spatial beats: meta, Squid Game and XR Funding",
-      path: "./images/slideimg5.webp",
+      path: "/images/slideimg5.webp",
       date: Date.now(),
     },
     {
@@ -88,8 +89,9 @@ function SlideShow({
                 overLayHeight={overLayHeight}
                 overLayWidth={overLayWidth}
                 titleAlignemnt={titleAlignemnt}
-                titleFont={ isMobile ? "25px" : titleFont}
+                titleFont={isMobile ? "25px" : titleFont}
                 header={header}
+                onClick={()=> router.push(`/${img.title}`)}
               />
             )}
           </div>

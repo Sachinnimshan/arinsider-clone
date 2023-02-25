@@ -6,7 +6,7 @@ import styles from "./layout.module.css";
 import useResponsive from "@/hooks/useResponsive";
 import Sidebar from "../sidebar";
 
-function Layout({ children }) {
+function Layout({ children, headerBg, title, date, author }) {
   const isMobile = useResponsive();
   return (
     <div className={styles.layoutContainer}>
@@ -21,12 +21,12 @@ function Layout({ children }) {
         ></link>
       </Head>
       <header>
-        <Header />
+        <Header headerBg={headerBg} title={title} date={date} author={author}/>
       </header>
       <main className={styles.layoutContent}>
         {children}
         <Sidebar />
-      </main>  
+      </main>
       <footer>
         <Footer />
       </footer>

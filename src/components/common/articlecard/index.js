@@ -17,7 +17,8 @@ function ArticleCard({
   flexGrow = true,
   maxWidth,
   titleAlignemnt,
-  titleFont = "25px"
+  titleFont = "25px",
+  onClick,
 }) {
   const isMobile = useResponsive();
 
@@ -28,6 +29,7 @@ function ArticleCard({
         width: isMobile ? "100%" : width,
         flexGrow: flexGrow && 1,
       }}
+      onClick={onClick}
     >
       {header && (
         <div className={styles.articleCardHeader}>
@@ -55,9 +57,9 @@ function ArticleCard({
             }}
           >
             <span
-              className={styles.articleCardTitle}
+              className="articleCardTitle"
               style={{
-                fontSize: titleFont
+                fontSize: titleFont,
               }}
             >
               {title}

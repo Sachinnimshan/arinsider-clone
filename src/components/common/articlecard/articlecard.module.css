@@ -19,8 +19,9 @@
 .articleCardTitle {
   color: var(--primary-font-color);
   font-weight: 700;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   display: flex;
+  align-self: flex-end;
 }
 
 .articleCardInfo {

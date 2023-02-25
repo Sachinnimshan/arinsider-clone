@@ -1,12 +1,13 @@
-import useResponsive from "@/hooks/useResponsive";
 import React from "react";
 import ArticleCard from "../common/articlecard";
 import { SiteIconDark } from "../common/icons";
 import Logo from "../common/logo";
 import SlideShow from "../slideshow";
 import YoutubeCard from "../iframe";
+import { useRouter } from "next/router";
 
 function Sidebar() {
+  const router = useRouter();
   const sections = [
     {
       title: "Weekly Newsletter",
@@ -48,6 +49,7 @@ function Sidebar() {
           overLayWidth="100%"
           title={item.displayText}
           flexGrow={false}
+          
         />
       ))}
     </div>

@@ -10,9 +10,11 @@ function SlideShow({
   overLayWidth = "50%",
   titleAlignemnt = "center",
   titleFont = "40px",
-  header
+  header,
+  type,
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideArray, setSlideArray] = useState([]);
   const isMobile = useResponsive();
   const autoScroll = true;
   let slideTimer;
@@ -91,7 +93,7 @@ function SlideShow({
                 titleAlignemnt={titleAlignemnt}
                 titleFont={isMobile ? "25px" : titleFont}
                 header={header}
-                onClick={()=> router.push(`/${img.title}`)}
+                onClick={() => router.push(`/${type}/${img.title}`)}
               />
             )}
           </div>

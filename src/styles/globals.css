@@ -119,6 +119,7 @@ body {
   border-bottom: 4px solid #f0f0f0;
   font-family: var(--secondary-font-family);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .articleNavKeys{
